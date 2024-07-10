@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #C49700; /* Cor de fundo semelhante à imagem fornecida */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    background: #ffcc00;
+    color: #fff;
+    padding: 10px 0;
+    min-height: 70px;
+    border-bottom: #333 3px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 0 15px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+header li {
+    padding: 0 20px;
+}
+
+header .highlight, header .current a {
+    color: #555;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #555;
+    font-weight: bold;
+}
+
+#home {
+    background: url('restaurante.jpg') no-repeat center center/cover;
+    height: 400px;
+    color: #fff;
+    text-align: center;
+    padding-top: 150px;
+}
+
+#home h2 {
+    font-size: 55px;
+    margin-bottom: 10px;
+    color: #FFD700; 
+}
+
+#home p {
+    font-size: 20px;
+    color: #FFD700; 
+}
+
+#menu, #about, #contact {
+    padding: 20px 0;
+}
+
+#menu h2, #about h2, #contact h2 {
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.menu-item {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #ffcc00;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #ff6600;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.show-more-btn {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background: #ffcc00;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.show-more-btn:hover {
+    background: #ff6600;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    animation: slideDown 0.5s;
+}
+
+@keyframes slideDown {
+    from { top: -70px; }
+    to { top: 0; }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul {
+        display: block;
+    }
+
+    header nav ul li {
+        padding: 0;
+    }
+
+    #home {
+        height: 200px;
+        padding-top: 50px;
+    }
+
+    #home h2 {
+        font-size: 30px;
+    }
+}
